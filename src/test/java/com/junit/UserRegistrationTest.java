@@ -42,7 +42,7 @@ public class UserRegistrationTest {
     @Test
     void givenLastName_WhenWithNumberOrSpecialCharacters_ShouldReturnFalse() {
         UserValidator validator = new UserValidator();
-        boolean result = validator.validateLastName("Pa#nja");
+        boolean result = validator.validateLastName("sa$hoo");
         Assertions.assertFalse(result);
     }
 
