@@ -50,7 +50,11 @@ public class EmailValidation {
     @Test
     public void givenEmailAsVariable_ShouldReturnAsPerTheParameterisedResult() {
         UserValidator validator = new UserValidator();
-        Assert.assertEquals(this.expectedResult, validator.validateEmailAddress(this.email2Test));
+        try {
+            Assert.assertEquals(this.expectedResult, validator.validateEmailAddress(this.email2Test));
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
 }
 
